@@ -1,4 +1,4 @@
-$(call inherit-product, device/samsung/i9500/full_i9500.mk)
+$(call inherit-product, device/samsung/jalteskt/full_jalteskt.mk)
 
 # Inherit some common CM stuff
 $(call inherit-product, vendor/cm/config/gsm.mk)
@@ -9,7 +9,7 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_i9500
-PRODUCT_DEVICE := i9500
+PRODUCT_NAME := cm_jalteskt
+PRODUCT_DEVICE := jalteskt
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=ja3gxx TARGET_DEVICE=ja3g BUILD_FINGERPRINT="samsung/ja3gxx/ja3g:4.2.2/JDQ39/I9500XXUAMDK:user/release-keys" PRIVATE_BUILD_DESC="ja3gxx-user 4.2.2 JDQ39 I9500XXUAMDK release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jalteskt TARGET_DEVICE=jalteskt BUILD_FINGERPRINT="samsung/jalteskt/jalteskt:4.3/JSS15J/E300SKSUENA2:user/release-keys" PRIVATE_BUILD_DESC="jalteskt-user 4.3 JSS15J E300SKSUENA2 release-keys"
