@@ -81,8 +81,6 @@ on post-fs-data
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
-#[ SEC_MM_DRM
-
     # DRM directory creation
     mkdir /system/etc/security/.drm 0775
     chown root root /system/etc/security/.drm
@@ -118,11 +116,8 @@ on post-fs-data
 # SEAndroid Restore context for efs files
     restorecon -R /efs
 # SEAndroid: it should be set 1 to pass CTS
-    setsebool android_cts=1
-    setsebool debugfs=1
-#]
-
-#-----------------------------------------------------------------------
+    setsebool android_cts 1
+    setsebool debugfs 1
 
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -133,9 +128,6 @@ on boot
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
-
-    setprop ro.build.product universal_5410
-    setprop ro.product.device universal_5410
 
     # 4.3 needs this
     chmod 0644 /proc/cmdline
@@ -426,11 +418,6 @@ on fs
     chown system radio /sys/class/audio/earjack/key_state
     chown system radio /sys/class/audio/earjack/state
 
-# Audio 2 MIC (Audience)
-    chown media audio /sys/class/2mic/es325/preset
-    chown media audio /sys/class/2mic/es325/sleep
-    chown media audio /sys/class/2mic/es325/veq
-
 # create data/gps for GPS daemon
     chown root system /sys/class/sec/gps/GPS_PWR_EN/value
     chmod 0664 /sys/class/sec/gps/GPS_PWR_EN/value
@@ -501,20 +488,8 @@ service immvibed /system/bin/immvibed
     group shell
     oneshot
 
-# SA, System SW, SAMSUNG
-service bugreport /system/bin/bugmailer.sh -v
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
-
-on property:ro.dumpstate.dmesg=1
-    write /proc/sys/kernel/dmesg_restrict 0
-
 #MHL
 on property:ro.debuggable=1
     chmod 666 /sys/class/mhl/hdcp_support
-on property:ro.debuggable=1
     chmod 666 /sys/class/mhl/timing
-on property:ro.debuggable=1
     chmod 666 /sys/class/mhl/swing
