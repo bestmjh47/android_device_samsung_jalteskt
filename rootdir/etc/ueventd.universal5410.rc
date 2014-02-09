@@ -69,7 +69,12 @@
 /dev/ttySAC3              0660   root       system
 
 /dev/umts*                0660   system     radio
+/dev/block/mmcblk0p8      0660   system     root
 /dev/block/mmcblk0p13     0660   system     radio
+/dev/block/mmcblk0p4      0660   system     radio
+/dev/block/mmcblk0p5      0660   system     radio
+/dev/block/mmcblk0p6      0660   system     radio
+/dev/block/mmcblk0p14     0660   system     radio
 
 # USB Acessory
 /dev/ttyUSB*              0660   system     usb
@@ -78,31 +83,36 @@
 # ALP Audio
 /dev/srp                  0660   system     audio
 
+#Core control
+/dev/b.L_operator	0660	radio	system
+/dev/bL_status		0660	radio	system
+
 # rfkill
 /dev/rfkill               0660   root       wifi
 
 # datarouter
 /dev/dun                  0600   system     system
-/dev/ttyGS0               0600   system     system
-/dev/ttyGS1               0600   system     system
-/dev/ttyGS2               0600   system     system
-/dev/ttyGS3               0600   system     system
+/dev/ttyGS*               0600   system     system
 
 # WFD
 /dev/graphics/fb1         0666   root       root
 
-# Core control
-/dev/b.L_operator         0660   radio      system
-/dev/bL_status            0660   radio      system
-
-# NFC
-/dev/bcm2079x             0600   nfc        nfc
-
-# BT lock
-/dev/btlock               0600   bluetooth  bluetooth
-
-# AKM8963
-/dev/akm8963              0600   system     radio
+# BlueTooth
+/dev/btlock			0600	bluetooth	bluetooth
 
 # Vibetonz
-/dev/tspdrv               0660   root       shell
+/dev/tspdrv			0660	system system
+
+# NFC
+/dev/bcm2079x			0600	nfc	nfc
+/dev/pn544			0600	nfc	nfc
+
+# Magnetic Sensor (AKM8963)
+/dev/akm8963			0600	system	radio
+
+# MobiCore
+/dev/mobicore		    0700	 system	 system
+/dev/mobicore-user	 0666	 radio		 system
+
+# S.LSI secdrv mem
+/dev/s5p-smem	       0660	 system	 system
