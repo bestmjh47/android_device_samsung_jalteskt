@@ -9,22 +9,24 @@
        NvStorageDir="/data/system/gps/"
        FactoryTestFilePath="/data/"
 
-       Log="JAVA"
        LogDirectory="/storage/sdcard0/gps/broadcom/storage"
 
-       TISEnabled="true"
+       WakeLock="geo"
+
        LPmode="false"
        CpColdStart="false"
        CpGuardTimeSec="1"
 
        SuplEnable="true"
-       SuplUseApn="false"
+       SuplUseApn="true"
        SuplTlsCertPath="/system/bin/gps.cer"
        SuplTlsEnable="false"
+       ReAidingIntervalSec="1200"
        SuplUT1Seconds="20"
        SuplUT2Seconds="20"
        SuplUT3Seconds="20"
        SuplVersion="1"
+       SuplMinorVersion="1"
 
        LbsEnable="true"
        LbsServer="BCMLS2.glpals.com"
@@ -32,6 +34,9 @@
        LtoDir="/data/system/gps/"
        LtoSyncThresholdDays="1"
        LbsTAC="10101401"
+
+       SuplLppCapable="false"
+       SuplEcidCapable="true"
 
        IgnoreJniTime="true"
        AssertEnabled="false"
