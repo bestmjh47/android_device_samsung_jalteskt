@@ -18,6 +18,7 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
     if [ ! -d $BASE/$DIR ]; then
         mkdir -p $BASE/$DIR
     fi
+    adb wait-for-device
     adb pull /system/$FILE $BASE/$DEST
     # if file does not exist try destination
     if [ "$?" != "0" ]
