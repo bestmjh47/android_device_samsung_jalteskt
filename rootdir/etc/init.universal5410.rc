@@ -2,7 +2,6 @@ import init.universal5410.usb.rc
 import init.universal5410.wifi.rc
 
 on init
-    start watchdogd
 
      # For Absolute Persistence Partition
     mkdir /persdata 0755 system system
@@ -452,10 +451,6 @@ service setup_fs /system/bin/setup_fs \
     user root
     group root
     oneshot
-
-# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
-service watchdogd /sbin/watchdogd 10 20
-    class core
 
 # 3D init
 service pvrsrvctl /system/vendor/bin/pvrsrvctl --start --no-module
