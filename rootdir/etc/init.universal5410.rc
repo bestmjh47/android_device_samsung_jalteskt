@@ -634,17 +634,6 @@ on property:ro.securestorage.support=true
     restorecon -R /dev/.secure_storage
     start secure_storage
 
-# LPM
-on property:ro.bootmode=charger
-    mount ext4 /dev/block/mmcblk0p20 /system wait ro
-
-on property:ro.bootmode=charger
-    class_start sec-charger
-
-service playlpm /system/bin/lpm
-    class sec-charger
-    critical
-
 # To reduce power consumption when setupwizard is running
 on property:persist.sys.setupwizard=START
     write /sys/power/cpufreq_max_limit 1000000
