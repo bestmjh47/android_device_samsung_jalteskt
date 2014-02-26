@@ -4,6 +4,8 @@
 /dev/ion                  0666   system     system
 /dev/video6               0660   media      media
 /dev/video7               0660   media      media
+/dev/video8               0660   media      media
+/dev/video9               0660   media      media
 
 # gscalers
 /dev/video23              0660   media      graphics
@@ -46,7 +48,7 @@
 # FIMG2D
 /dev/fimg2d               0666   system     graphics
 
-# JPEG
+#JPEG
 /dev/video11              0660   media      media
 /dev/video12              0660   media      media
 /dev/video13              0660   media      media
@@ -62,57 +64,26 @@
 # sensorhub
 /dev/ssp_sensorhub		  0660	 system     system
 
-# TTY
-/dev/ttySAC0              0600   bluetooth  bluetooth
-/dev/ttySAC1              0660   root       system
-/dev/ttySAC2              0660   root       system
-/dev/ttySAC3              0660   root       system
+/dev/ttySAC*	          0660	 root	 system
 
-/dev/umts*                0660   system     radio
 /dev/block/mmcblk0p8      0660   system     root
 /dev/block/mmcblk0p13     0660   system     radio
 /dev/block/mmcblk0p4      0660   system     radio
 /dev/block/mmcblk0p5      0660   system     radio
 /dev/block/mmcblk0p6      0660   system     radio
 /dev/block/mmcblk0p14     0660   system     radio
-
-# USB Acessory
+/dev/mdm                  0660   system     system
 /dev/ttyUSB*              0660   system     usb
+/dev/hsic*                0660   system     radio
 /dev/usb/lp*              0660   system     usb
+/dev/diag                 0660   system     radio
 
-# ALP Audio
+#ALP Audio
 /dev/srp                  0660   system     audio
 
-#Core control
-/dev/b.L_operator	0660	radio	system
-/dev/bL_status		0660	radio	system
-
-# rfkill
-/dev/rfkill               0660   root       wifi
-
-# datarouter
-/dev/dun                  0600   system     system
-/dev/ttyGS*               0600   system     system
-
-# WFD
-/dev/graphics/fb1         0666   root       root
-
-# BlueTooth
-/dev/btlock			0600	bluetooth	bluetooth
-
-# Vibetonz
-/dev/tspdrv			0660	system system
-
-# NFC
-/dev/bcm2079x			0600	nfc	nfc
-/dev/pn544			0600	nfc	nfc
-
-# Magnetic Sensor (AKM8963)
-/dev/akm8963			0600	system	radio
-
 # MobiCore
-/dev/mobicore		    0700	 system	 system
-/dev/mobicore-user	 0666	 radio		 system
+/dev/mobicore             0700   system     system
+/dev/mobicore-user        0666   radio     	system
 
-# S.LSI secdrv mem
-/dev/s5p-smem	       0660	 system	 system
+# Secure MEM driver
+/dev/s5p-smem             0660   system     system
