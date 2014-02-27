@@ -437,14 +437,12 @@ service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /sbin/watchdogd 10 20
     class core
-    seclabel u:r:watchdogd:s0
     disabled
 
 service cpboot-daemon /system/bin/cbd -d -t ss222 -b s -m c -p 13
     class main
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r shell
-    seclabel u:r:cbd:s0
 
 #sensorhubservice start
 service sensorhubservice /system/bin/sensorhubservice
