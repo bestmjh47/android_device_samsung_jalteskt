@@ -125,7 +125,7 @@ BOARD_RECOVERY_SWIPE := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/i9500/sepolicy
+    $(LOCAL_PATH)/sepolicy
 
 BOARD_SEPOLICY_UNION := \
     file_contexts \
