@@ -12,4 +12,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_NAME := cm_jalteskt
 PRODUCT_DEVICE := jalteskt
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jalteskt TARGET_DEVICE=jalteskt BUILD_FINGERPRINT="samsung/jalteskt/jalteskt:4.3/JSS15J/E300SKSUENA2:user/release-keys" PRIVATE_BUILD_DESC="jalteskt-user 4.3 JSS15J E300SKSUENA2 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_MODEL=SHV-E300S \
+    PRODUCT_NAME=jaltexx \
+    PRODUCT_DEVICE=jalteskt \
+    TARGET_DEVICE=jalteskt \
+    BUILD_FINGERPRINT="samsung/jaltexx/jalteskt:4.4.2/KOT49H/E300SKSUFNB2:user/release-keys" \
+    PRIVATE_BUILD_DESC="jaltexx-user 4.3 KOT49H E300SKSUFNB2 release-keys"
