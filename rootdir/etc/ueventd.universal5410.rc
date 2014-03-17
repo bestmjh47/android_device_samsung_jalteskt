@@ -110,6 +110,3 @@
 
 # DMB
 /dev/tdmb        0660    system    system
-
-# MTP
-/dev/usb_mtp_gadget        0660    system    system
