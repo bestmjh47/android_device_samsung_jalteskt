@@ -36,8 +36,6 @@ on init
     restorecon /dev/mbin0
     symlink /sys/devices/platform/s5p-ehci/ehci_power /dev/ehci_power
 
-<<<<<<< HEAD
-
     symlink /dev/block/mmcblk0p8 /dev/block/param
 
 on fs
@@ -268,14 +266,11 @@ on fs
     chown system radio /sys/class/host_notify/usb_otg/booster
     chmod 0660 /sys/class/host_notify/usb_otg/booster
 
-<<<<<<< HEAD
 # GPIO DVS
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpioinit_check
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpiosleep_check
     chown radio system /sys/class/secgpio_check/secgpio_check_all/checked_sleepGPIO
 
-=======
->>>>>>> remotes/CyanogenMod/cm-11.0
 # PMS DVFS
     chown radio system /sys/power/cpufreq_table
     chown radio system /sys/power/cpufreq_max_limit
@@ -416,7 +411,6 @@ on fs
     mkdir /persdata 0755 system system
     mkdir /persdata/absolute 0750 system system
 
-<<<<<<< HEAD
     wait /dev/block/platform/dw_mmc.0/by-name/PERSDATA
     check_fs /dev/block/platform/dw_mmc.0/by-name/PERSDATA ext4
     mount ext4 /dev/block/platform/dw_mmc.0/by-name/PERSDATA /persdata/absolute nosuid nodev barrier=1
