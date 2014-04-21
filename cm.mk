@@ -17,5 +17,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=jaltexx \
     PRODUCT_DEVICE=jalteskt \
     TARGET_DEVICE=jalteskt \
-    BUILD_FINGERPRINT="samsung/jaltexx/jalteskt:4.4.2/KOT49H/E300SKSUFNB2:user/release-keys" \
-    PRIVATE_BUILD_DESC="jaltexx-user 4.3 KOT49H E300SKSUFNB2 release-keys"
+    BUILD_FINGERPRINT="samsung/jaltexx/jalteskt:4.4.2/KOT49H/E300SKSUFND1:user/release-keys" \
+    PRIVATE_BUILD_DESC="jaltexx-user 4.4.2 KOT49H E300SKSUFND1 release-keys"
