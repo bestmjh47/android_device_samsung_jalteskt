@@ -47,7 +47,6 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.universal5410 \
     audio.usb.default \
-    mixer_paths.xml \
     tinymix
 
 # Bluetooth
